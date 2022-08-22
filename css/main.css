@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500&display=swap');
+:root {
+    --main-color: rgb(234, 178, 68);
+    --secondary-color: rgb(230, 68, 72);
+    --tertiary-color: rgb(226,225,223);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-color: var(--main-color); */
+}
+
+main{
+    max-width: 1200px;
+    margin: auto;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+h1{
+    font-family: 'Baloo Thambi 2', 'cursive';
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 900px;
+    padding: 136px;
+}
+
+.local{
+    font-family: 'Noto Sans', sans-serif;
+}
+.local h1{
+    color: var(--tertiary-color);
+}
+.local p{
+    padding: 10px;
+    column-count: 2;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-align: justify;
+}
+
+.bikes{
+    display: flex;
+    justify-content: center;
+}
+
+.signup{
+    font-family: 'Baloo Thambi 2', 'cursive';
+    font-weight: 300;
+    background-color: var(--tertiary-color);
+    padding: 1em 0.5em;
+    color: var(--secondary-color);
+}
+.signup h1{
+    color: var(--main-color);
+}
+
+input[type=text]{
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+}
+
+button{
+    padding: 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: var(--tertiary-color);
+}
+
+.about{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--secondary-color);
+}
+.about h1{
+    color: var(--tertiary-color);
+}
+.about p{
+    padding: 10px;
+    column-count: 2;
+    font-weight: 600;
+    text-align: justify;
+    color: var(--main-color);
+}
+
+
+/* MEDIA QUERIES */
+/* UNDER 800PX */
+@media(max-width: 800px){
+    h1{
+        font-size: 1.7em;
+    }
+    p{
+        font-size: 0.8em;
+    }
+    .logo{
+        width: 600px;
+        padding: 91px;
+    }
+    .local p{
+        column-count: 2;
+    }
+    input[type=text]{
+        display: block;
+        width: 300px;
+        margin-bottom: 1em;
+    }
+    button{
+        width: 313px;
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    .about p{
+        column-count: 2;
+    }
+}
+
+/* UNDER 600PX*/
+@media(max-width: 600px){
+    main{
+        background-color: var(--tertiary-color);
+    }
+    h1{
+        font-size: 1.6em;
+        text-align: center;
+    }
+    p{
+        font-size: 0.75em;
+    }
+    .logo{
+        width: 400px;
+        padding: 60px;
+    }
+    .local h1{
+        color: var(--secondary-color);
+    }
+    .local p{
+        column-count: 1;
+        background-color: var(--tertiary-color);
+        color: var(--main-color);
+    }
+    .bikes{
+        background-color: var(--tertiary-color);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        /* justify-items: center; */
+        text-align: center;
+    }
+    input[type=text]{
+        width: 400px;
+        padding: 10px 5px;
+        left: 15%;
+        position: relative;
+    }
+    button{
+        width: 300px;
+        font-size: 1.5em;
+        padding: 5px;
+        left: 24%;
+        position: relative;
+    }
+    .about p{
+        column-count: 1;
+    }
+}
